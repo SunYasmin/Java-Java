@@ -1,0 +1,281 @@
+
+
+        /*
+        Variable nasil olusturulur?
+        1)Access Modifier   2)Data Type     3)Variable ismi     4) =       5)Deger    6);
+
+       ** Java'da Data Type'lari
+
+        --Primitive Data Types  8 tane
+
+        int
+        byte
+        short
+        long
+        float
+        double
+        boolean
+        char
+
+        **Numeric Data Types: byte < short < int < long < float < double
+           Numeric Olmayan Data Types: boolean - char
+
+        --Non-Primitive Data Types
+        ozelligi daha fazla daha kaliteli String;Arrays;Classes;Interface
+        String
+
+       ** bit==>Memorynin en kucuk yapi tasina bit denir
+          byte==>8 bit 1 byte esittir
+
+
+       **  PRIMITIVE DATA TYPELARI ILE NON-PRIMITIVE  DATA TYPE'LARI ARASINDAKI FARKLAR NELERDIR?
+
+            1)primitive'de tum harfler kucuk; non-primitive'de ilk harf buyuk
+            2)primitive data typelarini Java olusturmustur, biz primitive data typelarini olusturamayiz.
+            ama non-primitive data type larini Java programcilari tarafindan istenildigi kadar olusturulabilir.
+            3)primitive data typelarin memoryde kapladigi yer degisirken; non-primitivelerin memoryde kapladigi yer hep aynidir
+            4)primitive data typelarinin memoryde ayirdigi alanda sadece o primitive datanin degeri vardir.
+            non-primitive'lerde ise degeri ve methodlari vardir.
+            5)primitive 'ler renklenirken mavi renklenirken ; non-primitiveler renklenmez.Or: String siyah kalir
+
+
+            ** Memory Kullanimi
+
+             1) Java'da iki turlu "memory" var
+                i)Stack Memory:
+                    a)Kucuk memory'dir
+                    b)Primitve ve Non-Primitive'lerin adreslerini(Reference) icerir
+
+               ii)Heap Memory:
+                    a)Buyuk Memory'dir
+                    b)Non-Primitive'leri icerir
+
+            2) Java Heap Memory'ye yerlestirilen her non-primitve data icin bir address(Reference) olusturur ve
+              bu adresi(Reference) Stack Memory'ye koyar.
+              Herhangi bir sebeple address(Reference) silinirse Java adresi(Reference) olmayan Heap deki non-primitive
+              data yi otomatik siler.
+
+             ** Memory'nin temizligini saglayan "Garbage Collector" vardir.
+
+
+           ** Object nasil olusturulur?
+
+        1)Class ismini yaziniz     2)Objeye bir isim veriniz    3) =
+        4)new keyword'unu kullan        5)Class ismi parantezle beraber(Constructor)
+
+        Car myHonda = new Car();
+
+        ** main method icinde kullanacaginiz hersey "static" olmalidir.
+
+
+     ** Scanner kullanicidan data almaya yarar, Scanner kullanici ile etkilesim kurmamizi saglar
+      Scanner bir Java Class'idir, bu Class'i kullanabilmek icin "import" etmek gerekir.
+      Scanner Class'i Java nin util kutuphanesindedir.
+
+
+      **Type Casting: Bir numeric data type'ini diger numeric data type'ina cevirmek demektir.
+      byte < short < int < long < float < double
+
+      Kucuk data type'ini buyuk data type'ine cevirmeye "Auto Widening" denir
+      Buyuk data type'ini kucuk data type'ine cevirmeye "Explicit Narrowing" denir
+
+      Java ondalik sayiyi, tam sayiya cevirirken ondalik kismini siler.
+
+      -- Java int bir degeri  byte a cevirirken 256 ya bolup kalani return eder.
+
+      ** Java primitive lere method'lar ekleyerek yeni bir
+                  yapi olusturdu, bu yapiya "Wrapper Class" denir
+
+                  Primitive         Wrapper
+                     byte     ==>    Byte
+                     short    ==>    Short
+                     ** int   ==>    Integer
+                     long     ==>    Long
+                     float    ==>    Float
+                     double   ==>    Double
+                     boolean  ==>    Boolean
+                     ** char  ==>    Character
+
+        --primitive'ler method icermez sadece deger icerir
+        -- "wrapper" lar method icerir
+
+        "primitive"ler nasil "wrapper"lara cevrilir(Autoboxing)
+        "wrapper"lar nasil "primitive"lere cevrilir(Unboxing)
+
+        Autoboxing ve Unboxing Java tarafindan otomatik olarak yapilir
+
+        **&& islemi sadece boolean ile kullanilir
+                true && true = true
+                true && false = false
+                false && true = false
+                false && false = false
+        && islemi mukemmelliyetcidir, true sonucunu alabilmek icin hersey true olmalidir.
+            Bir tane false varsa sonuc false demektir.
+
+
+        ** || islemi sadece boolean ile kullanilir.
+                  true || true = true
+                  true || false= true
+                  false || true= true
+                  false || false= false
+             || isleminde false alabilmek icin herseyin false olmasi gerekir.
+             || isleminde sadece bir tane true sonucu true yapmaya yeter
+
+
+
+        ** next() methodu kullanicidan String datasi almak icin kullanilir
+
+            -- next() ile nextLine() in farki nedir?
+            next() methodu kulanicidan gelen String'in sadece ilk kelimeisni alir.
+            nextLine() methodu kulanicidan gelen String'in tamamini alir.
+
+
+        ** char variable'lari matematiksel islemlerde kullanirsaniz, Java onlarin ASCII degerlerini kullanir.
+
+    Ornegin; System.out.println('A' + 'C'); ekrana AC yerine 132 yazdirir
+
+       ** Java'da "+" sembolunun iki anlami vardir.
+
+       i)Toplama islemi
+       ii)Birlestirme Islemi(Concatenation)
+
+    Java "+" sembolu gorunce once toplama yapmaya calisir, yapamazsa birlestirme islemi yapmaya calisir,
+    o da olmazsa hata verir.
+
+
+        ** Iki tane String'in birbirine esit olup olmadigini anlamak icin "==" degil, "equals()" kullaniniz.
+           Iki tane String'in birbirine esit olup olmadigini kontrol etmek icin iki tane method kullanilabilir
+
+            i)equals() ==> Buyuk harf ve kucuk harfi onemser. "A" ile "a" farklidir
+            ii)equalsIgnoreCase() ==> Buyuk harf kucuk harfi onemsemez. "A" ile "a" aynidir.
+
+
+        ** Java "nested" kodlari calistirirken cok zaman harcar, buna "Time Complexity" denir.
+                  Bu yuzden mumkunse "nested" kod yazmamaya calisiriz.
+
+
+        ** toLowerCase() methodu bir String'deki tum character'leri kucuk harfe cevirir.
+           toUpperCase() methodu bir String'deki tum character'leri buyuk harfe cevirir.
+
+        ** Switch de sadece int, byte, short, char, String data tipleri kullanilabilir
+           Eger 3 den fazla durum varsa switch() tercih ederim
+
+
+
+        ** String Class Methodlari
+
+                1)equals(): i)Iki tane String'in ayni olup olmadigini anlamamiza yarar.
+                            ii)equals() method'u "boolean" return eder.
+
+                2)equalsIgnoreCase(): i) Iki tane String'in ayni olup olmadigini buyuk harf kucuk harfe dikkat etmeden anlamamiza yarar.
+                                      ii) equalsIgnoreCase() method'u "boolean" return eder.
+
+                3)toLowerCase(): i)Bir String'deki tum harfleri kucuk harfe cevirmek icin kullanilir.
+                                 ii) toLowerCase() method'u "String" return eder
+
+                4)toUpperCase(): i)Bir String'deki tum harfleri buyuk harfe cevirmek icin kullanilir.
+                                 ii) toUpperCase() method'u "String" return eder
+
+                5)charAt(): i) Bir String'den belli bir index'deki characteri almak icin kullanilir.
+                             ii) charAt() method'u "char" return eder.
+
+                6)length(): i) Bir String'de kac tane character kullanildigini ogrenmek icin kullanilir
+                            ii) length() method'u "int" return eder.
+
+                7)contains(): i)Bir String'de belli bir characterin veya characterlerin var olup olmadigini
+                anlamak icin kullanilir
+                              ii) contains() method'u "boolean" return eder.
+
+                8)split(): i)Bir String'i istedigimiz character'den parcalamaya yarar
+                           ii)split() method'u "Array" return eder.
+                9)trim() : bir String'in bas ve sonundaki "space" karakterlerini siler,
+                  aradaki "space" karakterlerine dokunmaz
+
+        ** h.compareTo(i); kod iki tane String'i alfabetik(lexicographic) olarak karsilastirir.
+           Buyuk harf e duyarlidir.
+           Buyuk harf kucuk harf'e duyarli olmasini istemezseniz h.compareToIgnoreCase(i); kullanabilirsiniz.
+           h.compareTo(i); kodda "h" nin alphabetik sirasindan "i" nin alfabetik sirasi cikarilir.
+
+        ** a.repeat(5); kodu "a" String'ini yanyana 5 kere yapistirir.
+           repeat(0); empty String retrun eder.
+           Java Document'e ulasmak icin Windows==>ctrl e basili tutun
+           Mac==>Command e basili tutun ve mouse ile method ismine tiklayin.
+
+        ** ternary
+        Condition   ?  Condition dogru ise uygulanacak kod : Condition yanlis ise uygulanacak kod
+
+        note:Pozitif sayilarin ve sifirin in mutlak degeri kendileridir
+             Negatif sayilarin mutlak degeri -1 ile carpilmis halleridir
+
+
+        ** Javada her classin en az bir tane "parent" classi vardir.
+           Sadece "Object" class'in "parent" class'i yoktur.
+
+        ** Yazdiginiz code sadece bazi durumlar icin calisirsa o code'a "Hard Coding" denir.
+           Yazdiginiz code her durum icin calisirsa o code'a "Dynamic Coding" denir.
+
+        ** substring() in iki kullanimi vardir.
+           1)substring(baslangic indexi, bitis indexi) String'in ortasindan bir parca almaya yarar
+           2)substring(baslangic indexi) String'in verilen index'ten sonuna kadar almaya yarar
+
+        ** replace() method'u bir String'deki herhangi bir karakteri veya karakterleri degistirmek icin kullanilir.
+           replaceFirst("a", "*"); kod String deki ilk "a" yi "*" e cevirir.
+           replace("a", "*"); kod String deki tum "a" lari "*" e cevirir.
+
+        **  Bir grup data'yi ifade eden kod'lara "Regex" denir.
+            "Regex" Regular Expressions in kisaltilmis halidir.
+
+            1)Tum rakamlar ==> [0-9]
+            2)Tum kucuk harfler ==> [a-z]
+            3)Tum buyuk harfler ==> [A-Z]
+            4)Tum harfler ==> [a-zA-Z]
+            5)Sesli harfler ==> [aeiouAEIOU]
+            6)Space ==> [ ]
+            7)Tum rakamlar ve tum harfler ==> [0-9a-zA-Z]
+            8)Tum noktalama isaretleri ==> \\p{Punct}
+
+            1)Rakamlar haric tum karakterler ==> [^0-9]
+            2)Kucuk harfler haric tim karakterler ==> [^a-z]
+            3)Buyuk harfler haric tum karakterler ==> [^A-Z]
+            4)Tum harfler haric tum karakterler ==> [^a-zA-Z]
+            5)Space haric ==> [^ ]
+
+
+
+        ** indexOf() method'u verilen character veya caharacter'lerin "ilk gorunumunun" index'ini verir
+
+        ** lastIndexOf() method'u verilen character veya caharacter'lerin "son gorunumunun" index'ini verir.
+
+        ** indexOf() hem String hem de char ile kullanilabilir.
+
+        ** indexOf() iki parametre ile kullanilirsa ikinci parametrede verilen sayi kadar "character"'i gectikten
+           sonra istenen character'in ilk gorunumunun indexini return eder.
+
+        ** lastIndexOf() iki parametre ile kullanilirsa ikinci parametrede verilen sayiyi "index" olarak kabul edip en
+           bastan bu indexe kadar olan karakterleri bir kutu icine aliniz ve lastIndexOf() method'unu sadece bu kutu
+           icindeki String icin kullaniniz.
+
+
+        ** isEmpty() method'u bir String'in bos olup olmadigini kontrol eder.
+           Eger String'de hic character yoksa isEmpty() "true" return eder, her hangi bir character varsa "false"
+           return eder.
+
+        ** length()==0 demek isEmpty() true verir demektir.
+           Bir String'in bos olup olmadigini anlamak icin "length()==0" kullanmayin, "isEmpty()" kullanin
+
+        ** isBlank() hem "bos String" icin hem de "sadece space" iceren String'ler icin true return eder.
+
+
+        ** Tekrarli isler icin "loop" kullaniriz
+
+           Dort cesit "loop" vardir;
+           i)for-loop    ii)while-loop    iii)do-while-loop    iv)for-each-loop
+
+        ** Loop'un icinde bazi degerler icin Loop'un calismamasini isterseniz "continue" kullanin
+
+        ** Java bir islem icin method uretmisse o method'u kullanmak "best practice" dir.
+
+
+
+        */
+
