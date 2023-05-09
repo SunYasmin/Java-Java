@@ -64,7 +64,7 @@ public class Variables01 {
 
                                 NOT PRIMITIVE DATA TYPES (METHOD OLAN)
 
-     String: Isim adres, kimlik no gibi bir veya birden fazla karakter iceren degerlerde kullanilir.
+     String: Isim, adres, kimlik no gibi bir veya birden fazla karakter iceren degerlerde kullanilir.
              String degerleri mutlaka cift tirnak arasina konulmalidir.
              String non-primitive dir. Yani bir String olusturdugunuzda Java size bir suru method verir.
 

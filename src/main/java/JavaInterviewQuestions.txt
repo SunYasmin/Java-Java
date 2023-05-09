@@ -49,7 +49,9 @@ S11: Java da package nedir?
 C11: İlgili Class’ların toplandığı yerdir.
 
 S12: Package’ların avantajları nelerdir?
-C12:
+C12: Kodlara kolay ulasimi saglar ve import u package alir. Import package tarafindan alinir.
+     Projenin hangi parcasi oldugunu anlamamizi saglar ve isim karisikligini onler. (Gizli classlar icin access modifier ile ulasilmasini sinirlandiririz.)
+     Package icerisinde olusturulan classlar ve interfacelerin her istenildiginde tekrar kullanimini saglar.
 
 1. İsim çatışmasını önler.
 2. Kodlara kolay ulaşım sağlar.
