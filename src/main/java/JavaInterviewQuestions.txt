@@ -15,6 +15,9 @@ void: methodun return type dır.
 main (): JVM tarafından aranan methodun adıdır. JVM: Java sanal makinesi
 String args ise main methoda iletilen parametredir.
 
+Jre'nin (bilgisayarinizdaki java calisma zamani ortaminin) programin calismasini tetiklemek icin programinizin ana main methodu cagirmasi gerektigidir.
+Ornegin burada main method aciklamasi olarak adlandirilan bir sinif bir ana yontemi vardir. Jre nin gercekte yapacagi sey bu main methodu cagirmak.
+
 S4: Wrapper Class’lar nelerdir?
 C4: Wrapper Class’lar Java primitive datalarını o sınıfın başvuru türlerine veya o
 Class’ın nesnelerine dönüştürürler.
