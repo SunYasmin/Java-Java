@@ -1,4 +1,4 @@
-package day21inheritancepolymorphism;
+package day22inheritancepolymorphism;
 
 public class Animal {
 
