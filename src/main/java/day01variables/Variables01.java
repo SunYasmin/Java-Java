@@ -106,9 +106,5 @@ public class Variables01 {
     //main method arabanin methodu gibidir. Main method calismadan hicbirsey calismaz.
     public static void main(String[] args) {   //kisayol psvm yaz gelsin
 
-
     }
-
-
-
 }

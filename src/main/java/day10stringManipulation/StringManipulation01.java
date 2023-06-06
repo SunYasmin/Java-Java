@@ -45,6 +45,17 @@ public class StringManipulation01 {
         //Java Document'e ulasmak icin Windows==>ctrl e basili tutun        Mac==>Command e basili tutun ve mouse ile method ismine tiklayin.
         String n = a.repeat(-5);
         System.out.println(n);
+
+        String str = "abcde";
+        str.trim();
+        str.toUpperCase();
+        str.substring(3,4);
+        System.out.println(str);
+        System.out.println(str.trim());
+        System.out.println(str.toUpperCase());
+        System.out.println(str.substring(3, 4));
+        System.out.println(str);
+
     }
 
 
