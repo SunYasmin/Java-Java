@@ -3,35 +3,34 @@ package day18arraylists01Passbyvaue;
 public class MethodOverloading01 {
 
 
-    public static void main(String[] args) {
-
-
-        int a = 5;    //Post Increment (sonra arttir demek)
-        int b =  a ++ ;
-
-        System.out.println(b); //5
-        System.out.println(a); //6 ==> Cunku Java a'nin degerini b'nin icine koyduktan
-        // sonra okumaya devam etti a arttigi icin 6 gorundu. "Post Increment" denir.
-
-
-        //Pre Increment
-        int c = 10;
-        int d = ++c;
-        System.out.println(d);//11
-        System.out.println(c);//11 ==> c arttirdiktan sonra yazdirdigimiz icin oda 11 gozukecek
-
-        //Post Decrement
-        int e = 20;
-        int f = e--;
-        System.out.println(f);//20
-        System.out.println(e);//19
-
-        //Post Decrement
-        int h = 30;
-        int i = --h;
-        System.out.println(i);//29
-        System.out.println(h);//29
-    }
+      /**
+       Method Overloading nasil yapilir?
+        1) Method isimleri ayni olmalidir.
+        2) Method parametleri farkli olmalidir.
+             i) Parametre sayilari degistirilebilir.
+             ii) Parametrelerin data tiplerini degistirebilirsiniz.
+             iii) Parametlerin yerlerini degistirebilirsiniz ancak
+             data tipleri farkli ise.
+        3) Method Ismi + Parametreler = Method Signature
+           Method Signature disinda ne degistirirseniz degistirin Java
+           o methodlari farkli kabul etmez.
+     */
+        public static void main(String[] args) {
+            add(3, 5);
+            add(3, 5.0);
+        }
+        public  static  void  add (int a, int b) {
+            System.out.println(a+b);
+        }
+        public  static  void  add (int a, int b, int c) {
+            System.out.println(a+b+c);
+        }
+        public  static  void  add (int a, double b) {
+            System.out.println(a+b);
+        }
+        public  static  void  add (double a, int b) {
+            System.out.println(a+b);
+        }
 
 
 }
