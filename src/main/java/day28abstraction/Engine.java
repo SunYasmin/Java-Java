@@ -2,7 +2,7 @@ package day28abstraction;
 
 public interface Engine {
 
-    /*
+    /**
             1) Atomic olsun diye "parent"i parcaladim ama bir "Child Class" in birden fazla "parent" i oldu,
             bu ise Java'da mumkun degildir. Cunku Java "multiple Inheritance" i desteklemez.
             "multiple inheritance" class'larda mumkun degildir fakat Java "interface" isimli yeni bir yapi olusturdu
