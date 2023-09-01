@@ -8,7 +8,7 @@ import java.util.Set;
 public class HashMap01 {
 
 
-/*
+/**
         1)Map'ler key-value structure kullanir
         2)Key'ler unique'dir
         3)Value'lar tekrarli data icerebilir
